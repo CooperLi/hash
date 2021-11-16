@@ -12,7 +12,7 @@ import (
 
 const bufferSize = 64 * 1024
 
-const bufferSize2 = 128 * 1024
+const bufferSize2 = 32 * 1024
 
 func CheckSumReader(path string, hasher hash.Hash) ([]byte, error) {
 	file, err := os.Open(path)

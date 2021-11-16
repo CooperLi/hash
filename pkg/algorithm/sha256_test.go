@@ -40,6 +40,14 @@ func benchmarkSHA256FileWithBufioReader2(b *testing.B, fileSize int) {
 	}
 }
 
+func BenchmarkSHA256FileWithReadFile_100MB(b *testing.B) {
+	benchmarkSHA256FileWithReadFile(b, 100*util.SizeMB)
+}
+
+func BenchmarkSHA256FileWithReadFile_200MB(b *testing.B) {
+	benchmarkSHA256FileWithReadFile(b, 200*util.SizeMB)
+}
+
 func BenchmarkSHA256FileWithReadFile_500MB(b *testing.B) {
 	benchmarkSHA256FileWithReadFile(b, 500*util.SizeMB)
 }
@@ -50,6 +58,14 @@ func BenchmarkSHA256FileWithReadFile_1GB(b *testing.B) {
 
 func BenchmarkSHA256FileWithReadFile_2GB(b *testing.B) {
 	benchmarkSHA256FileWithReadFile(b, 2*util.SizeGB)
+}
+
+func BenchmarkSHA256FileWithReadFile_4GB(b *testing.B) {
+	benchmarkSHA256FileWithReadFile(b, 4*util.SizeGB)
+}
+
+func BenchmarkSHA256FileWithReadFile_8GB(b *testing.B) {
+	benchmarkSHA256FileWithReadFile(b, 8*util.SizeGB)
 }
 
 func BenchmarkSHA256FileWithBufioReader_500MB(b *testing.B) {
